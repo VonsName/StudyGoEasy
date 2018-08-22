@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>goeasy2</h1>
+<button onclick="go()">点击2</button>
+<script type="text/javascript" src="https://cdn.goeasy.io/goeasy.js"></script>
+<script type="text/javascript">
+    var goEasy=new GoEasy({appkey: 'BC-key'});
+    goEasy.subscribe({
+        channel: 'go2',
+        onMessage: function(message){
+            alert('接收到消息:'+message.content);
+        }
+    });
+    function go() {
+        goEasy.publish({
+            channel:'go1',
+            message:'go2发送测试消息!'
+        });
+    }
+</script>
+
+
+</body>
+</html>
