@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script type="text/javascript" src="https://cdn.goeasy.io/goeasy.js"></script>
+    <script type="text/javascript">
+        var goEasy=new GoEasy({appkey: 'BC-c9279786f4974c33a8aba98596570789'});
+goEasy.subscribe({
+channel: 'test',
+onMessage: function(message){
+alert('接收到消息:'+message.content);//拿到了信息之后，你可以做你任何想做的事
+}
+});
+    </script>
+    <h1>goeasy</h1>
+</body>
+</html>
